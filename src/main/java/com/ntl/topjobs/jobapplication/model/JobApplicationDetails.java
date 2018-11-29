@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ntl.topjobs.jobapplication.bean;
+package com.ntl.topjobs.jobapplication.model;
 
 import java.time.LocalDate;
 
@@ -16,7 +16,7 @@ import com.ntl.topjobs.jobapplication.service.ServiceForJobApplication;
  *
  */
 @Entity
-public class JobApplicationBean {
+public class JobApplicationDetails {
 
 	private String jobDescription;
 	private String noOfOpenings;
@@ -26,7 +26,7 @@ public class JobApplicationBean {
 	private LocalDate joiningDate;
 	private String empId;
 	@Id
-	private String jobId;
+	private String jobId; 
 	@Transient
 	ServiceForJobApplication serviceForJobApplication;
 	/**
@@ -50,7 +50,7 @@ public class JobApplicationBean {
 	/**
 	 * 
 	 */
-	public JobApplicationBean() {
+	public JobApplicationDetails() {
 		super();
 		serviceForJobApplication=new ServiceForJobApplication();
 	}
